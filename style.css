@@ -28,7 +28,13 @@ header h1 {
     font-weight: bold;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
-
+@media screen and (max-width: 768px) {
+    header {
+        background: url('uni image 2.jpg') no-repeat center center;
+        background-size: cover;
+        height: 80vh; /* Reduce the height for smaller screens */
+    }
+}
 
 /* Navbar */
 .navbar {
@@ -364,10 +370,9 @@ header h1 {
 }
 
 /* Research Section */
+
 #research {
-    background: url('your_background_image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: rgb(10, 10, 10);
+
     padding: 80px 20px;
     text-align: center;
     height: 100vh; 
@@ -417,6 +422,63 @@ header h1 {
     background-color: #b71c1c;
     border-color: #b71c1c;
 }
+
+@media screen and (max-width: 768px) {
+    #research {
+        padding: 60px 20px;
+        height: auto;
+    }
+
+    .research-heading {
+        font-size: 2.5rem;
+    }
+
+    .research-subheading {
+        font-size: 1.5rem;
+    }
+
+    .info-item h4 {
+        font-size: 2rem;
+    }
+
+    .info-item p {
+        font-size: 1.2rem;
+    }
+
+    .btn-danger {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #research {
+        padding: 40px 15px;
+        height: auto;
+    }
+
+    .research-heading {
+        font-size: 2rem;
+    }
+
+    .research-subheading {
+        font-size: 1.2rem;
+    }
+
+    .info-item h4 {
+        font-size: 1.8rem;
+    }
+
+    .info-item p {
+        font-size: 1rem;
+    }
+
+    .btn-danger {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+}
+
 
 /* Upcoming Events Section */
 #upcoming-events {
@@ -562,36 +624,74 @@ header h1 {
 #full-background {
     background: url('girl\ image.webp') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh; 
+    background-position: center center;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff; 
+    color: #fff;
     text-align: center;
     padding: 0 20px;
 }
 
-/* Quote Container */
 .quote-container {
     max-width: 800px;
     padding: 40px;
     border-radius: 8px;
+    text-align: center;
 }
-
 
 .quote-text {
     font-size: 1.5rem;
     font-style: italic;
     margin-bottom: 20px;
     color: #fff;
+    text-align: center;
 }
-
 
 .quote-author {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 20px;
+    text-align: center;
 }
+
+@media (max-width: 768px) {
+    #full-background {
+        padding: 0 10px;
+    }
+
+    .quote-container {
+        padding: 30px;
+    }
+
+    .quote-text {
+        font-size: 1.3rem;
+    }
+
+    .quote-author {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #full-background {
+        padding: 0 10px;
+    }
+
+    .quote-container {
+        padding: 20px;
+    }
+
+    .quote-text {
+        font-size: 1.1rem;
+    }
+
+    .quote-author {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* Button Styling */
 .btn-danger {
@@ -1025,17 +1125,6 @@ header h1 {
     background-color: #c31717;
     color: rgb(242, 231, 231);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 768px) {
     header {
