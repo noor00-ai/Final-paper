@@ -19,33 +19,37 @@
     <!-- navigation bar section -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #d32f2f;">
         <div class="container">
-            <!-- branding link for stanford university -->
+            <!-- Branding link for Stanford University -->
             <a class="navbar-brand text-white fw-bold" href="#">Stanford University</a>
-            <!-- toggler button for mobile view to make it responsive -->
+            
+            <!-- Toggler button for mobile view to make it responsive -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- navbar links section for large screens-->
+            
+            <!-- Navbar links section for large screens -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <!-- navigation links for different sections of the website -->
+                    <!-- Navigation links for different sections of the website -->
                     <li class="nav-item"><a class="nav-link text-white fw-bold" href="#">Students</a></li>
                     <li class="nav-item"><a class="nav-link text-white fw-bold" href="#">Faculty & Staff</a></li>
                     <li class="nav-item"><a class="nav-link text-white fw-bold" href="#">Families</a></li>
                     <li class="nav-item"><a class="nav-link text-white fw-bold" href="#">Visitors</a></li>
                     <li class="nav-item"><a class="nav-link text-white fw-bold" href="#">Alumni</a></li>
                 </ul>
-                <!-- search form for users to search the website -->
+                
+                <!-- Search form for users to search the website -->
                 <form class="d-flex ms-3">
-                    <input class="form-control form-control-sm" type="search" placeholder="search" aria-label="search">
+                    <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="search">
                     <button class="btn btn-outline-light btn-sm" type="submit">
-                        <!-- using bootstrap icons for the search icon -->
+                        <!-- Using Bootstrap icons for the search icon -->
                         <i class="bi bi-search"></i>
                     </button>
                 </form>
             </div>
         </div>
     </nav>
+    
     <!-- Header Section with background image -->
     <header>
         <h1>Stanford</h1>
@@ -109,61 +113,62 @@
     </section>
 
     <!-- New Academic News Section  -->
-    <section id="academic-news" class="container my-5">
-        <h2>Academic News</h2>
-        <p>Discover the latest achievements and advancements happening within the academic world at Stanford.</p>
-        
-        <div class="row">
-            <!-- Academic News Story 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="image 1.jpg" class="card-img-top" alt="Academic Research News">
-                    <div class="card-body">
-                        <h5 class="card-title">Undergraduate Education</h5>
-                        <p class="card-text">Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Academic News Story 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="image 2.jpg" class="card-img-top" alt="Tech Innovation in Academia">
-                    <div class="card-body">
-                        <h5 class="card-title">Driving impact</h5>
-                        <p class="card-text">Continuing adult education, executive and professional programs, and programs for K-12 students</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Academic News Story 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="image 3.jpg" class="card-img-top" alt="Innovation in STEM Education">
-                    <div class="card-body">
-                        <h5 class="card-title">Innovation in STEM Education</h5>
-                        <p class="card-text">Stanford’s STEM programs are evolving to meet the demands of the modern world, preparing students for the challenges of tomorrow.</p>
-                    </div>
-                </div>
-            </div>
-            
+    <section class="academics-section">
+        <div class="section-header">
+            <h1 class="section-title" style="font-weight: 700;">Academics</h1>
+            <p class="section-subtitle">Preparing students to make meaningful contributions to society<br>as engaged citizens and leaders in a complex world</p>
         </div>
-        
+
+        <div class="container">
+            <div class="row">
+                <!-- Undergraduate Education -->
+                <div class="col-md-4">
+                    <a href="#" class="education-card">
+                        <img src="https://www.cdc.gov/fellowships/images/students-chatting-lecture-hall.jpg" alt="Undergraduate Education">
+                        <h2 class="card-title" style="">Undergraduate Education</h2>
+                        <p class="card-text">Rich learning that provide a broad liberal arts foundation and deep subject-area expertise</p>
+                        <span class="learn-more">Undergraduate Education</span>
+                    </a>
+                </div>
+
+                <!-- Graduate Education -->
+                <div class="col-md-4">
+                    <a href="#" class="education-card">
+                        <img src="https://marvel-b1-cdn.bc0a.com/f00000000288157/www.stvincent.edu/admission-aid/2022-5-7-Spring-Commencement190.JPG" alt="Graduate Education">
+                        <h2 class="card-title">Graduate Education</h2>
+                        <p class="card-text">Unsurpassed opportunities to participate in the advancement of entire fields of knowledge</p>
+                        <span class="learn-more">Graduate Education</span>
+                    </a>
+                </div>
+
+                <!-- Driving Impact -->
+                <div class="col-md-4">
+                    <a href="#" class="education-card">
+                        <img src="https://home.edweb.net/wp-content/uploads/20240828-pd-event.png" alt="Driving Impact">
+                        <h2 class="card-title">Driving Impact</h2>
+                        <p class="card-text">Continuing adult education and professional programs, and programs for K-12 students</p>
+                        <span class="learn-more">Lifelong Learning</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="schools-section">
+            <h2 class="schools-title" style="font-weight: 700;">Seven schools in which to pursue your passions</h2>
+            <div class="schools-links">
+                <a href="#" class="school-link">Medicine</a>
+                <a href="#" class="school-link">Law</a>
+                <a href="#" class="school-link">Humanities & Sciences</a>
+                <a href="#" class="school-link">Engineering</a>
+                <a href="#" class="school-link">Education</a>
+                <a href="#" class="school-link">Sustainability</a>
+                <a href="#" class="school-link">Business</a>
+            </div>
+            <a href="#" class="more-button">More about academics</a>
+        </div>
     </section>
-    <!-- Seven Schools Section -->
-<section id="seven-schools" class="container my-5">
-    <h2>Seven schools in which to pursue your passions</h2>
-        <p class="row my-4">
-            Medicine | Law | Humanities & Sciences| Engineering | Education | Sustainability | Business
-        </p>
-        
 
-    <hr class="school-line">
 
-    <div class="text-center mt-4">
-        <a href="#more-academics" class="btn btn-primary btn-lg">More about Academics</a>
-    </div>
-</section>
 
     <!-- New Section with Background Image and Quote -->
 <section id="quote-section" class="container-fluid">

@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f4f4f4;
-    padding-top: 70px; /* Adjust this to account for the fixed navbar height */
+    
     font-size: 18px; /* Increased font size for general readability */
 }
 /* Header */
@@ -26,6 +26,7 @@ header h1 {
 }
 
 /* Navbar */
+
 .navbar {
     background-color: #861405; /* Red background */
 }
@@ -46,6 +47,30 @@ header h1 {
     background-color: #861405;
     color: #861405; /* Red text on hover */
 }
+
+/* Make navbar collapse on small screens */
+.navbar-toggler {
+    border-color: white;
+}
+
+@media (max-width: 992px) {
+    /* Adjust font sizes for smaller screens */
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        font-size: 1.1rem; /* Slightly smaller font size on mobile */
+    }
+
+    .navbar .nav-link {
+        margin: 0.5rem 0; /* Add some spacing between links */
+    }
+
+    /* Make search button stack below links */
+    .navbar .btn-outline-light {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
 
 /* Mission Section */
 #mission {
@@ -77,75 +102,97 @@ header h1 {
     border-color: #b71c1c;
 }
 
-/* Campus News */
 #campus-news {
     background-color: #f8f9fa;
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 #campus-news p {
     text-align: center;
-    font-size: 1.8rem; /* Increased font size */
-    margin-bottom: 30px;
+    font-size: 1.4rem;
+    margin-bottom: 40px;
 }
-#campus-news h5{
+
+#campus-news h5 {
     text-align: center;
+    font-size: 1.6rem;
 }
+
 #campus-news h2 {
-    font-size: 3rem; /* Increased font size */
+    font-size: 3.2rem;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .card {
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-img-top {
     height: 250px;
     object-fit: cover;
-    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .card-body {
-    padding: 20px;    
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
-/* Academics Section */
+.card-body h5 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
 #academic-news {
     background-color: white;
     padding: 80px 0;
+    text-align: center;
 }
 
 #academic-news h2 {
-    font-size: 3rem; /* Increased font size */
+    font-size: 2.5rem; /* Adjusted font size */
     margin-bottom: 30px;
     color: #333;
-    text-align: center;
 }
-#academic-news h5{
-    text-align: center;
+
+#academic-news h5 {
+    font-size: 1.6rem; /* Adjusted font size */
+    margin-bottom: 20px;
+    color: #444;
 }
 
 #academic-news p {
-    font-size: 1.5rem; /* Increased font size */
+    font-size: 1.3rem; /* Adjusted font size */
     margin-bottom: 40px;
     color: #666;
-    text-align: center;
 }
 
 #academic-news h3 {
-    font-size: 2rem; /* Increased font size */
+    font-size: 1.8rem; /* Adjusted font size */
     margin-bottom: 20px;
     color: #d32f2f;
-    text-align: center;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     #academic-news h2 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Further reduced font size for smaller screens */
     }
 
     #academic-news h3 {
@@ -153,13 +200,18 @@ header h1 {
     }
 
     #academic-news p {
-        font-size: 1rem;
+        font-size: 1.1rem; /* Slightly smaller font size for paragraphs */
+    }
+
+    #academic-news h5 {
+        font-size: 1.4rem; /* Adjusted font size */
     }
 
     #academic-news ul li {
-        font-size: 1rem;
+        font-size: 1.1rem; /* Adjusted font size for list items */
     }
 }
+
 /* Seven Schools Section */
 #seven-schools {
     background-color: #f8f9fa;
@@ -172,7 +224,6 @@ header h1 {
     margin-bottom: 20px;
 }
 
-/* School Names with Separator */
 #seven-schools .row {
     display: flex;
     justify-content: center;
@@ -184,28 +235,39 @@ header h1 {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    margin: 0 0px; /* Space between the schools */
+    margin: 0 0px;
 }
 
-/* Add line separator between the items */
-
+.school-item + .school-item::before {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #000;
+    margin: 10px 0;
+}
 
 .school-item:hover {
     cursor: pointer;
 }
 
+#seven-schools p {
+    color: #007bff;
+}
+
 .btn-primary {
-    background-color: #d9534f;
-    border-color: #d9534f;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    border-radius: 50px;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+    font-size: 18px; 
+    padding: 15px 40px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #c9302c;
-    border-color: #c9302c;
+    background-color: #c82333;
+    border-color: #c82333;
+    transform: scale(1.05);
 }
 
 
@@ -416,37 +478,99 @@ header h1 {
     color: #666;
 }
 
-/* Health Care Section */
 #health-care {
     background-color: #f4f4f4;
     padding: 80px 20px;
+    text-align: center;
 }
 
 #health-care h2 {
-    font-size: 3.5rem; /* Increased font size */
+    font-size: 3.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
 }
-#health-care h5{
-    text-align: center;
+
+#health-care h5 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 #health-care p {
-    font-size: 1.8rem; /* Increased font size */
+    font-size: 1.8rem;
     color: #666;
-    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .health-details h5 {
-    font-size: 2rem; /* Increased font size */
+    font-size: 2rem;
     color: #333;
     margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 .health-description {
-    font-size: 1.2rem; /* Increased font size */
+    font-size: 1.3rem;
     color: #666;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
+
+@media (max-width: 991px) {
+    #health-care h2 {
+        font-size: 2.8rem;
+    }
+
+    #health-care h5 {
+        font-size: 1.6rem;
+    }
+
+    #health-care p {
+        font-size: 1.6rem;
+    }
+
+    .health-details h5 {
+        font-size: 1.8rem;
+    }
+
+    .health-description {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 575px) {
+    #health-care h2 {
+        font-size: 2.2rem;
+        padding: 0 15px;
+    }
+
+    #health-care p {
+        font-size: 1.4rem;
+        max-width: 95%;
+    }
+
+    .health-details h5 {
+        font-size: 1.6rem;
+    }
+
+    .health-description {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+
 /* Full Background Section */
 #full-background {
     background: url('girl\ image.webp') no-repeat center center fixed;
@@ -665,9 +789,9 @@ header h1 {
     background-color: #dc3545;
     border-color: #dc3545;
     color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 25px;
+    font-size: 18px; /* Slightly increased font size */
+    padding: 15px 40px; /* Increased padding for a wider button */
+    border-radius: 5px; /* Sharper edges for a more edgy look */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -680,6 +804,7 @@ header h1 {
 .text-center.mt-4 {
     margin-top: 30px;
 }
+
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
@@ -801,3 +926,130 @@ header h1 {
         font-size:0.9rem;
     }
 }
+
+.academics-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.education-card {
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.education-card:hover {
+    color: inherit;
+}
+
+.education-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #A00000;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.learn-more {
+    color: blue !important;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.learn-more:after {
+    content: ' >';
+}
+
+.schools-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.schools-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.schools-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.school-link {
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.school-link:not(:last-child):after {
+    content: '|';
+    margin-left: 15px;
+    color: #2e2d29;
+}
+
+.more-button {
+    background-color: #ee0b0b;
+    color: rgb(248, 234, 234);
+    padding: 12px 24px;
+    border: none;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.more-button:hover {
+    background-color: #c31717;
+    color: rgb(242, 231, 231);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
