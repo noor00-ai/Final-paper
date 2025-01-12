@@ -1,0 +1,803 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 70px; /* Adjust this to account for the fixed navbar height */
+    font-size: 18px; /* Increased font size for general readability */
+}
+/* Header */
+header {
+    background: url('uni\ image\ 2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: rgb(227, 213, 213);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header h1 {
+    font-size: 8rem; /* Increased header font size */
+    font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #861405; /* Red background */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white !important; /* White text */
+    font-weight: bold; /* Bold text */
+    font-size: 1.3rem; /* Increased font size */
+}
+
+.navbar .btn-outline-light {
+    border-color: white; /* White border for search button */
+    color: white; /* White color for search button */
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #861405;
+    color: #861405; /* Red text on hover */
+}
+
+/* Mission Section */
+#mission {
+    background-color: #f8f9fa;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#mission h2 {
+    font-size: 3rem; /* Increased font size */
+    color: #333;
+}
+
+#mission p {
+    font-size: 1.5rem; /* Increased font size */
+    color: #666;
+}
+
+/* More Info Button */
+.btn-danger {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+    padding: 12px 30px;
+    font-size: 1.4rem; /* Increased font size */
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+}
+
+/* Campus News */
+#campus-news {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+#campus-news p {
+    text-align: center;
+    font-size: 1.8rem; /* Increased font size */
+    margin-bottom: 30px;
+}
+#campus-news h5{
+    text-align: center;
+}
+#campus-news h2 {
+    font-size: 3rem; /* Increased font size */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;    
+}
+
+/* Academics Section */
+#academic-news {
+    background-color: white;
+    padding: 80px 0;
+}
+
+#academic-news h2 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+#academic-news h5{
+    text-align: center;
+}
+
+#academic-news p {
+    font-size: 1.5rem; /* Increased font size */
+    margin-bottom: 40px;
+    color: #666;
+    text-align: center;
+}
+
+#academic-news h3 {
+    font-size: 2rem; /* Increased font size */
+    margin-bottom: 20px;
+    color: #d32f2f;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #academic-news h2 {
+        font-size: 2rem;
+    }
+
+    #academic-news h3 {
+        font-size: 1.5rem;
+    }
+
+    #academic-news p {
+        font-size: 1rem;
+    }
+
+    #academic-news ul li {
+        font-size: 1rem;
+    }
+}
+/* Seven Schools Section */
+#seven-schools {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#seven-schools h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* School Names with Separator */
+#seven-schools .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.school-item {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0px; /* Space between the schools */
+}
+
+/* Add line separator between the items */
+
+
+.school-item:hover {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #d9534f;
+    border-color: #d9534f;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.btn-primary:hover {
+    background-color: #c9302c;
+    border-color: #c9302c;
+}
+
+
+/* Grid container */
+.grid-container {
+    display: flex;
+    
+}
+
+.grid-item {
+    padding: 15px;
+
+}
+
+.grid-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #861405;
+}
+
+.grid-item .list-unstyled {
+    font-size: 1rem;
+    color: #555;
+}
+
+.grid-item .list-unstyled li {
+    padding: 8px 0;
+}
+
+.grid-item .list-unstyled li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+        grid-template-rows: auto; /* Auto row height */
+    }
+
+    #schools h2 {
+        font-size: 2rem;
+    }
+
+    .grid-item .list-unstyled li {
+        font-size: 1rem;
+    }
+}
+
+.btn-primary {
+    background-color: #d9534f;
+    border-color: #d9534f;
+    padding: 12px 30px;
+    font-size: 1.4rem; /* Increased font size */
+}
+
+.btn-primary:hover {
+    background-color: #c9302c;
+    border-color: #c9302c;
+}
+
+/* Quote Section */
+#quote-section {
+    background: url('man\ image.webp') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 20px;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Makes text readable on the image */
+}
+
+.quote-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.quote-text {
+    font-size: 2.5rem; /* Increased font size */
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.quote-author {
+    font-size: 1.8rem; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.btn-danger {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+    padding: 12px 25px;
+    font-size: 1.4rem; /* Increased font size */
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+}
+
+/* Research Section */
+#research {
+    background: url('your_background_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(10, 10, 10);
+    padding: 80px 20px;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.research-container {
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.research-heading {
+    font-size: 3.5rem; /* Increased font size */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.research-subheading {
+    font-size: 2rem; /* Increased font size */
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.info-item h4 {
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: bold;
+}
+
+.info-item p {
+    font-size: 1.5rem; /* Increased font size */
+    color: #080808;
+}
+
+.btn-danger {
+    background-color: #920707;
+    border-color: #0b0b0b;
+    padding: 12px 25px;
+    font-size: 1.4rem; /* Increased font size */
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+}
+
+/* Upcoming Events Section */
+#upcoming-events {
+    background-color: #f4f4f4;
+    padding: 80px 20px;
+}
+
+#upcoming-events h2 {
+    font-size: 3.5rem; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#upcoming-events p {
+    font-size: 1.8rem; /* Increased font size */
+    color: #666;
+}
+
+.event-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.event-details {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.event-details h5 {
+    font-size: 2rem; /* Increased font size */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event-time {
+    font-size: 1.4rem; /* Increased font size */
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.event-description {
+    font-size: 1.2rem; /* Increased font size */
+    color: #666;
+}
+
+/* Health Care Section */
+#health-care {
+    background-color: #f4f4f4;
+    padding: 80px 20px;
+}
+
+#health-care h2 {
+    font-size: 3.5rem; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#health-care h5{
+    text-align: center;
+}
+
+#health-care p {
+    font-size: 1.8rem; /* Increased font size */
+    color: #666;
+    text-align: center;
+}
+
+.health-details h5 {
+    font-size: 2rem; /* Increased font size */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.health-description {
+    font-size: 1.2rem; /* Increased font size */
+    color: #666;
+}
+/* Full Background Section */
+#full-background {
+    background: url('girl\ image.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Quote Container */
+.quote-container {
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/* Quote Text Styling */
+.quote-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Author Text Styling */
+.quote-author {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn-danger {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quote-text {
+        font-size: 1.2rem;
+    }
+    
+    .quote-author {
+        font-size: 1rem;
+    }
+
+    .btn-danger {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+/* General Styles for Campus Life Section */
+#campus-life {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+}
+
+/* Title and Description Styling */
+#campus-life h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+#campus-life h5{
+    text-align: center;
+}
+
+#campus-life p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666;
+    text-align: center;
+}
+
+/* Cards for Student Life, Arts & Culture, and Recreation */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #d32f2f; /* Stanford Red */
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* More About Campus Life Button */
+.btn-danger {
+    background-color: #861405;
+    border-color: #861405;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #campus-life h2 {
+        font-size: 2rem;
+    }
+    #campus-life p {
+        font-size: 1rem;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+    .card-img-top {
+        height: 200px; /* Adjust image size on smaller screens */
+    }
+    .btn-danger {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+/* General Section Styles */
+#athletics {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+#athletics h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+#athletics h5 {
+    text-align: center;
+}
+#athletics p {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Button Styles */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+    transform: scale(1.05);
+}
+
+.text-center.mt-4 {
+    margin-top: 30px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+
+    #athletics h2 {
+        font-size: 28px;
+    }
+
+    #athletics p {
+        font-size: 16px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .btn-danger {
+        font-size: 14px;
+    }
+}
+/* Styling for the image */
+
+.event-image {
+    width: 100%;  
+    height: 5in; 
+    object-fit: cover;  
+    margin-top: 20px; 
+}
+
+
+
+/* Social Media Icons Section */
+.social-icon {
+    font-size: 50px; /* Increased icon size */
+    color: black;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    display: inline-block;
+    text-align:center;
+}
+
+.social-icon:hover {
+    color: #f30707;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 20px; /* Larger text for smaller devices */
+    }
+
+    header h1 {
+        font-size: 6rem;
+    }
+
+    .quote-text {
+        font-size: 2rem;
+    }
+
+    .quote-author {
+        font-size: 1.5rem;
+    }
+
+    .btn-danger {
+        font-size: 1.2rem;
+    }
+
+    .event-details h5 {
+        font-size: 1.8rem;
+    }
+
+    .event-time {
+        font-size: 1.2rem;
+    }
+
+    .event-description {
+        font-size: 1.1rem;
+    }
+
+    .btn-danger {
+        font-size: 1.2rem;
+    }
+
+    .social-icon {
+        font-size: 40px;
+    }
+}
+/* Footer Styles */
+#footer {
+    background-color: #861405;
+    color: #fff;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+.footer-text {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.footer-text a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-text {
+        font-size:0.9rem;
+    }
+}
